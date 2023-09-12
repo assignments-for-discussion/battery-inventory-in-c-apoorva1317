@@ -9,7 +9,7 @@ struct CountsBySoH {
 
 struct CountsBySoH countBatteriesByHealth(const int* presentCapacities, int nBatteries) {
   struct CountsBySoH counts = {0, 0, 0};
-  int i;
+  int i,soh;
   for(i=0;i<nBatteries;i++)
     {
       soh=(100*presentCapacities[i])/120;// calculate soh
